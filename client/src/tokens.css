@@ -1,0 +1,37 @@
+/* Cobalt Research implementation defaults. Bind the heading family to the
+   verified internal family name of the actual 기계연구원 font when available. */
+:root {
+  --protein-brand: #2459d3;
+  --protein-brand-hover: #1948b8;
+  --protein-selected: #e9f0ff;
+  --protein-canvas: #f5f8fc;
+  --protein-surface: #ffffff;
+  --protein-heading: #101d40;
+  --protein-text: #344565;
+  --protein-muted: #64748b;
+  --protein-border: #dfe6f0;
+  --protein-success: #16865d;
+  --protein-pending: #a86400;
+  --protein-error: #c43d3d;
+  --protein-font-body: "Pretendard", system-ui, sans-serif;
+  --protein-font-heading: "기계연구원", "Pretendard", system-ui, sans-serif;
+  --protein-font-sequence: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --protein-page-padding: 22px;
+  --protein-panel-padding: 14px;
+  --protein-grid-gap: 14px;
+  --protein-field-gap: 8px;
+  --protein-control-height: 32px;
+  --protein-row-height: 30px;
+  --protein-radius: 6px;
+  --protein-topbar-height: 60px;
+  --protein-sidebar-width: 210px;
+  --protein-focus-ring: 0 0 0 3px rgb(36 89 211 / 25%);
+}
+
+@media (max-width: 640px) {
+  :root {
+    --protein-page-padding: 14px;
+    --protein-control-height: 40px;
+    --protein-row-height: 36px;
+  }
+}

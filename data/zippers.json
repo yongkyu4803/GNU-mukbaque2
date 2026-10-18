@@ -1,0 +1,72 @@
+﻿{
+  "_README": [
+    "Coiled-coil / leucine zipper sequence library.",
+    "",
+    "EVERY entry carries a `recall` field describing how the sequence got",
+    "here. `recall` is NOT a measure of how good the zipper is -- it says how",
+    "much you should trust that the letters below match the cited paper:",
+    "",
+    "  high   - widely reproduced sequence, but still worth a 30-second check",
+    "  medium - verify against the cited reference before ordering anything",
+    "",
+    "None of these were copied from a database by the program that wrote this",
+    "file. Check them against the primary reference before any experiment.",
+    "",
+    "To extend the library, append entries or point --library at your own",
+    "JSON or FASTA file. Designed orthogonal sets worth adding by hand:",
+    "SYNZIP1-23 (Thompson et al. 2012, ACS Synth Biol 1:118), the Woolfson",
+    "lab CC-Di/CC-Tri series, and the Keating lab bZIP coiled-coil array."
+  ],
+  "zippers": [
+    {
+      "name": "GCN4-p1",
+      "organism": "S. cerevisiae",
+      "sequence": "RMKQLEDKVEELLSKNYHLENEVARLKKLVGER",
+      "offset": 6,
+      "partners": ["GCN4-p1"],
+      "note": "Canonical parallel homodimer. Asn16 at an 'a' position enforces the dimer and parallel orientation.",
+      "reference": "O'Shea et al. 1991, Science 254:539",
+      "recall": "high"
+    },
+    {
+      "name": "c-Jun-LZ",
+      "organism": "H. sapiens",
+      "sequence": "RIARLEEKVKTLKAQNSELASTANMLREQVAQLKQKVMNHV",
+      "offset": 6,
+      "partners": ["c-Fos-LZ", "c-Jun-LZ"],
+      "note": "Forms both homodimers and the much more stable heterodimer with Fos.",
+      "reference": "Glover & Harrison 1995, Nature 373:257",
+      "recall": "medium"
+    },
+    {
+      "name": "c-Fos-LZ",
+      "organism": "H. sapiens",
+      "sequence": "LTDTLQAETDQLEDEKSALQTEIANLLKEKEKLEFILAAH",
+      "offset": 6,
+      "partners": ["c-Jun-LZ"],
+      "note": "Acidic; cannot homodimerise appreciably, so it is obligately heterodimeric with Jun.",
+      "reference": "Glover & Harrison 1995, Nature 373:257",
+      "recall": "medium"
+    },
+    {
+      "name": "Acid-p1",
+      "organism": "designed",
+      "sequence": "AQLEKELQALEKENAQLEWELQALEKELAQ",
+      "offset": 1,
+      "partners": ["Base-p1"],
+      "note": "'Peptide Velcro' acidic strand; glutamates at e/g positions block homodimerisation.",
+      "reference": "O'Shea, Lumb & Kim 1993, Curr Biol 3:658",
+      "recall": "medium"
+    },
+    {
+      "name": "Base-p1",
+      "organism": "designed",
+      "sequence": "AQLKKKLQALKKKNAQLKWKLQALKKKLAQ",
+      "offset": 1,
+      "partners": ["Acid-p1"],
+      "note": "'Peptide Velcro' basic strand; pairs with Acid-p1 through g<->e' salt bridges.",
+      "reference": "O'Shea, Lumb & Kim 1993, Curr Biol 3:658",
+      "recall": "medium"
+    }
+  ]
+}
